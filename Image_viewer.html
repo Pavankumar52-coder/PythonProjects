@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image List</title>
+</head>
+<body>
+    <h1>Uploaded Images</h1>
+    <ul>
+        {% for image in Images %}
+        <li><img src="{{ image.file.url }}" alt="{{ image.name }}" style="max-width: 200px;"/></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'image_upload' %}">Upload new image</a>
+</body>
+</html>
